@@ -58,10 +58,10 @@ variable "private_key" {
 
 variable "ansible_user" {
   type = string
-  default = "austindunn"
+  default = "<add_username>"
 }
 
 variable "cloud_key" {
   type = string
-  default = "./creds/apache-modsec-952a08a33240.json"
+  default = "./creds/<add_GCP_creds>"
 }
