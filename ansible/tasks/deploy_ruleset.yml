@@ -1,0 +1,20 @@
+---
+  #Task to take custom WAF rules and apply them to modsec
+  - name: Apply ModSecurity Custom Rules
+    become: True
+    become_user: root
+    become_method: sudo
+    ansible.builtin.copy:
+      src: ../rules/modseccustomrules.conf
+      dest: /etc/modsecurity/modsecurity_custom_rules.conf
+      owner: 'root'
+      group: 'root'
+      mode: u=rw,g=r,o=r
+
+  - name: Restart apache2 service
+    become: True
+    become_user: root
+    become_method: sudo
+    ansible.builtin.service:
+      name: apache2
+      state: restarted

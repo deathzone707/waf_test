@@ -1,0 +1,6 @@
+---
+- hosts: "{{ inv }}"
+  tasks:
+  - include_tasks: tasks/install_modsec.yml
+  - include_tasks: tasks/add_webpage.yml
+  - include_tasks: tasks/deploy_ruleset.yml

@@ -1,0 +1,22 @@
+---
+  #Task to take custom WAF rules and apply them to modsec
+  - name: Apply Aapche CSS
+    become: True
+    become_user: root
+    become_method: sudo
+    script:
+      cmd: ../scripts/install_css.sh
+
+  - name: Apply Aapche form.html
+    become: True
+    become_user: root
+    become_method: sudo
+    script:
+      cmd: ../scripts/install_form.sh
+
+  - name: Apply Aapche index.html
+    become: True
+    become_user: root
+    become_method: sudo
+    script:
+      cmd: ../scripts/install_index.sh

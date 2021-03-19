@@ -1,0 +1,60 @@
+---
+  - name: Install Apache2
+    become: True
+    become_user: root
+    become_method: sudo
+    apt:
+      name: apache2
+      state: present
+  
+  - name: Make CSS
+    become: True
+    become_user: root
+    become_method: sudo
+    script:
+      cmd: ../scripts/install_css.sh
+
+  - name: Make index.html
+    become: True
+    become_user: root
+    become_method: sudo
+    script:
+      cmd: ../scripts/install_index.sh
+
+  - name: Make form.php
+    become: True
+    become_user: root
+    become_method: sudo
+    script:
+      cmd: ../scripts/install_form.sh
+
+  - name: Install ModSecurity
+    become: True
+    become_user: root
+    become_method: sudo
+    apt:
+      name: libapache2-mod-security2
+      state: present
+
+  - name: Install git
+    become: True
+    become_user: root
+    become_method: sudo
+    apt:
+      name: git
+      state: present
+
+  - name: Configure ModSecurity Base
+    become: True
+    become_user: root
+    become_method: sudo
+    script:
+      cmd: ../scripts/config_modsec.sh
+
+  - name: Restart Apache2
+    become: True
+    become_user: root
+    become_method: sudo
+    service:
+      name: apache2
+      state: restarted
