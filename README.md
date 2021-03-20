@@ -18,3 +18,8 @@
 ### Updating Custom Mod Security WAF Rules
 > - Custom rules are saved under ./ansible/rules/modsecuritycustomrules.conf
 > - More information on rules can be found here: https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-%28v2.x%29#secrule
+> - To deploy custom rulesets once the server is running use:</br>
+   **cd terraform && ansible-playbook -u <insert_username> --private-key <insert_private_key> -e "inv=host" -i apache.ini ../ansible/custom_rules_deploy.yml**
+
+### Testing WAF deployment
+> The WAF deployment can be tested by running: some_script.py

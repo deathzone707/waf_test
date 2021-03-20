@@ -1,0 +1,4 @@
+---
+- hosts: "{{ inv }}"
+  tasks:
+  - include_tasks: tasks/deploy_ruleset.yml
