@@ -12,7 +12,7 @@ crash.log
 **/creds/*.json
 
 # apache server info
-**/terraform/apache.ini
+**/apache.ini
 
 # terraform plan
 **/terraform/plan.*
