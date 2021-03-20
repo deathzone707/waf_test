@@ -63,5 +63,5 @@ variable "ansible_user" {
 
 variable "cloud_key" {
   type = string
-  default = "./creds/<add_GCP_creds>"
+  default = "./creds/<add_GCP_token>"
 }
