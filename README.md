@@ -18,6 +18,7 @@
 > - http://<GCP_ip>/form.php
 >   - This endpoint will take use input and the WAF will inspect this input looking for keywords marked as malicious based on custom rules
 ### Updating Custom Mod Security WAF Rules
+> - The standard ModSecurity core ruleset rules are included in this deployment. https://github.com/coreruleset/coreruleset
 > - Custom rules are saved under ./ansible/rules/modsecuritycustomrules.conf
 > - More information on rules can be found here: https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-%28v2.x%29#secrule
 > - To deploy custom rulesets once the server is running use:</br>
