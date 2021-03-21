@@ -22,4 +22,6 @@
    **cd terraform && ansible-playbook -u <insert_username> --private-key <insert_private_key> -e "inv=host" -i apache.ini ../ansible/custom_rules_deploy.yml**
 
 ### Testing WAF deployment
-> The WAF deployment can be tested by running: some_script.py
+> - The WAF deployment can be tested by running: ./test_script/waf_test.py
+> - This script is used to test custom rules applied to Mod Security
+> - To test the ModSec core ruleset we can lverage the gotestwaf project: https://github.com/wallarm/gotestwaf </br> This test will run the OWASP top 10 based attacks against our WAF to determine baseline performance. </br> *Note this test requires docker to run
