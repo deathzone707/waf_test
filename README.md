@@ -2,6 +2,8 @@
 
 *This code is used to spin up an apache web server and deploy mod security WAF on top of the web server.*
 
+![Diagram](ModSec_Deployment.jpeg)
+
 ### Make the following adjustments to terraform/variables.tf:
 > 1) Set the variable ***ansible_user*** to the desired username
 > 2) Set the variable ***cloud_key*** to the GCP computer service account json token.
